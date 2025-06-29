@@ -1,0 +1,127 @@
+/* Modal backdrop */
+.about-dementia-modal {
+  position: fixed;        /* Fixed positioning for overlay */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;          /* Flexbox to center modal */
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  z-index: 9999;           /* Ensure modal is on top of all other content */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: rgb(237, 228, 235);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;              /* Set modal width to cover part of the screen */
+  max-width: 1000px;       /* Optional: set a maximum width */
+  position: relative;      /* Position the close button inside the modal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for modal */
+  display: flex;           /* Flexbox to create a side-by-side layout */
+  flex-direction: row;     /* Place sections side by side */
+  justify-content: space-between; /* Space out sections evenly */
+}
+
+/* Close button */
+.close-button {
+  position: absolute;      /* Position close button inside modal */
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #610f63;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #ff0000;           /* Change color on hover for close button */
+}
+
+/* Book-like layout for the modal sections */
+.book-container {
+  display: flex;
+  justify-content: space-between;
+  width: 200%;
+}
+
+/* About Dementia Section */
+.about-section {
+  width: 48%;
+  margin-right: 20px; /* Space between sections */
+  font-family: 'Arial', sans-serif;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  color: #610f63; /* Darker purple for headings */
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.about-section p, .about-section ul {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-section ul {
+  margin-top: 10px;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Dementia Cure Section */
+.cure-section {
+  width: 48%;
+  font-family: 'Arial', sans-serif;
+}
+
+.cure-section h2 {
+  font-size: 24px;
+  color: #610f63; /* Darker purple for headings */
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.cure-section p, .cure-section ul {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.cure-section ul {
+  margin-top: 10px;
+}
+
+.cure-section ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-section, .cure-section {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .book-container {
+    flex-direction: column;
+  }
+}

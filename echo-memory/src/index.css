@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root {
+  --primary: #ff6f91; /* Bright pink */
+  --secondary: #ffffff; /* White */
+  --error: #ff4a4a; /* Error red */
+  --background: rgb(247, 199, 227); /* Original light background */
+  --gradient-bg: linear-gradient(to right, #ff6f91, #ff9a9e); /* Gradient background */
+}
+
+
+  body {
+    background-image: "Gray and White Luxury Daniel Gallego Blog Banner.png"; /* Correct image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Ensures full viewport height */
+    width: 100%; /* Ensures full width */
+    margin: 0; /* Removes default margin */
+    font-family: 'Playwright GB S', cursive; /* Correct font family */
+    color: #333; /* Optional text color */
+  }
+  
+
+
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title Styles */
+.title h1 {
+  color: rgb(0, 0, 0); /* Darker shade for Echo Memory */
+  font-size: 6rem; 
+  letter-spacing: 1px;
+  font-weight: 700; 
+  text-align: center;
+  margin: 10px 0;
+}
+
+
+.title h2 {
+  margin-top: 20px;
+  font-size: 2.5rem; /* Increased size for emphasis */
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 15px;
+  border-radius: 12px; /* Softer corners */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.title p {
+  font-size: 1.2rem; /* Increased size for readability */
+  color: #160116;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Upload Form Styles */
+form {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+
+label {
+  display: inline-block; 
+  width: 60px; 
+  height: 60px; 
+  border: 2px solid var(--primary); /* Keep the border as is or change if desired */
+  border-radius: 50%; /* Make it circular */
+  margin: 10px auto;
+  color: var(--secondary); /* Color for the plus sign text, can be white or another color */
+  background-color: rgb(95, 0, 55); /* New color for the circular plus sign */
+  font-weight: bold;
+  font-size: 26px; 
+  line-height: 58px; 
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+label:hover {
+  background: #ffffff; /* Darker shade on hover */
+  color: rgb(0, 0, 0); /* Change text color on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+label input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.output {
+  height: 60px;
+  font-size: 1rem; /* Increased size */
+  color: var(--primary);
+  padding: 10px;
+  text-align: center;
+}
+
+.error {
+  color: var(--error);
+  font-weight: bold;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  height: 8px; /* Increased height */
+  background: var(--primary);
+  border-radius: 5px; /* Softer corners */
+  margin-top: 20px;
+}
+
+/* Image Grid Styles */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.img-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-top: 100%;
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition */
+}
+
+.img-wrap:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px; /* Softer corners */
+}
+
+/* Modal Styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darker backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdrop img {
+  display: block;
+  max-width: 90%; /* Slightly increased size */
+  max-height: 90%;
+  margin: auto;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+  border: 3px solid rgb(12, 11, 11);
+  border-radius: 12px; /* Softer corners */
+}
+
+/* Logo */
+#logoecho {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#logoecho:hover {
+  transform: scale(1.1);
+}
+
