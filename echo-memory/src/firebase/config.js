@@ -5,12 +5,7 @@ import { getAuth } from 'firebase/auth'; // Import getAuth for Firebase Authenti
 
 // Firebase configuration object
 const firebaseConfig = {
-  apiKey: "AIzaSyA3KY15CyvsD7wFjohCMq3miPixmJ86xsE",
-  authDomain: "echo-memory-wow.firebaseapp.com",
-  projectId: "echo-memory-wow",
-  storageBucket: "echo-memory-wow.appspot.com",
-  messagingSenderId: "186767368133",
-  appId: "1:186767368133:web:69902e4df56b1e1fe175ac"
+  
 };
 
 // Initialize Firebase
